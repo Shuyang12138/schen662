@@ -1,0 +1,33 @@
+---
+title: "Instruction for using bicorr codes"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Adjusting codes
+### Read  in Data
+1. Give the name of the data file to the variable named option.(option = "FEMALE.txt" in sample codes)
+2. Specify the number of rows contained in the data file.(apoE<-read.table(option,nrows = 23568) in sample codes,change 23568 to the number of rows in your data file)
+### Data cleaning
+The data matrix after data cleaning should be a matrix whose column names are gene names and each row represents for observations of one individual over all different genes.
+```{r cars}
+summary(cars)
+```
+### Organize the output
+1. You can change the desired p-value for your needs.(result <- result[result$p<0.1,] in sample codes, you may change 0.1 to another value) 
+### Save the result
+1. Change the name of your output.(save(result,file = "2_apoE_FEMALE_bicorr.Rdata") in sample codes)
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
